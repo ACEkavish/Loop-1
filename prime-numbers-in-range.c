@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main()
+int main(void)
 {
     int n, i, j, isPrime;
 
@@ -17,7 +17,7 @@ int main()
     {
         isPrime = 1;
 
-        for (j = 2; j * j <= i; j++)
+        for (j = 2; j <= i / j; j++)
         {
             if (i % j == 0)
             {
@@ -27,9 +27,7 @@ int main()
         }
 
         if (isPrime)
-        {
             printf("%d ", i);
-        }
     }
 
     printf("\n");
